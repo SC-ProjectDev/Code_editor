@@ -1,0 +1,36 @@
+codeeditor/
+├── main.py                  # Entry point, app init
+├── config.py                # Constants, paths, default settings
+├── themes.py                # Light/Dark theme palettes + stylesheet system
+├── syntax/
+│   ├── __init__.py
+│   ├── python_highlighter.py
+│   ├── javascript_highlighter.py
+│   └── highlighter_factory.py   # Auto-detect & assign by file extension
+├── editor/
+│   ├── __init__.py
+│   ├── code_editor.py           # CodeEditor + LineNumberArea
+│   ├── editor_pane_manager.py   # Split/single view toggling logic
+│   └── tab_manager.py           # (future) multi-tab support
+├── filetree/
+│   ├── __init__.py
+│   └── file_tree_panel.py       # Tree view + GIF player widget
+├── ai/
+│   ├── __init__.py
+│   ├── ai_panel.py              # The third column UI (context box)
+│   ├── gemini_client.py         # Gemini API wrapper
+│   ├── gpt_client.py            # GPT API wrapper
+│   ├── session_logger.py        # JSON session logging with @Persona tags
+│   └── file_attachment.py       # Attach files to AI context
+├── gif_engine/
+│   ├── __init__.py
+│   ├── gif_player.py            # QLabel-based GIF animator
+│   └── gif_state_manager.py     # Maps app states → GIF folders
+└── assets/
+    └── gifs/
+        ├── idle/
+        ├── saving/
+        ├── typing/
+        ├── ai_waiting/
+        ├── ai_response/
+        └── error/
